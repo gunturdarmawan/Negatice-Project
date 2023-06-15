@@ -1,0 +1,293 @@
+<!doctype html>
+<html>
+   
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <script src="/src/js/script.js"></script>
+</head>
+<body>
+  <section id="hero-section">
+    <div class="2xl:container 2xl:mx-auto lg:pb-16 lg:px-20 md:pb-12 md:px-6 pb-9 px-4 lg:mt-4">
+    <div class="relative w-full h-full pb-10 ">
+      <!-- navbar on mobile -->
+      <nav class="lg:hidden relative z-50">
+          <div class="flex py-2 justify-between items-center px-4">
+              <div>
+                <img src="/src/img/negatice-logo-letter.png" alt="logo" class="h-20 rounded-full" />
+              </div>
+              <div class="visible flex items-center">
+                  <button id="open" onclick="MenuHandler(true)" class="focus:outline-none focus:ring-2 focus:ring-black" >
+                      <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/large_typography_with_gradient_and_glass_effect_Svg2.svg" alt="menu" />
+                  </button>
+                  <ul id="list" class="hidden p-2 border-r bg-white absolute rounded top-0 left-0 right-0 shadow mt-24">
+                      <li class="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+                          <a href="javascript: void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
+                              <span class="font-bold">Home</span>
+                          </a>
+                      </li>
+                      <li class="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none" onclick="dropdownHandler(this)">
+                          <a href="javascript: void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
+                              <span class="font-bold">About Us</span>
+                          </a>
+                      </li>
+                      <li class="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none" onclick="dropdownHandler(this)">
+                          <a href="javascript: void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
+                              <span class="font-bold">Galery</span>
+                          </a>
+                      </li>
+                      <li class="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal pt-2 pb-4 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none" onclick="dropdownHandler(this)">
+                          <a href="javascript: void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
+                              <span class="font-bold">Download</span>
+                          </a>
+                      </li>
+                  </ul>
+                  <div class="xl:hidden">
+                      <button id="close" class="hidden close-m-menu focus:ring-2 focus:ring-black focus:outline-none" onclick="MenuHandler(false)">
+                          <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/large_typography_with_gradient_and_glass_effect_Svg3.svg" alt="close" />
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </nav>
+      <!-- navbar on pc -->
+      <nav class="f-f-l relative z-10">
+          <div class="relative z-10 mx-auto container hidden w-full px-4 xl:px-0 lg:flex justify-between items-center pb-11">
+              <div>
+                  <img src="/src/img/negatice-logo-letter.png" alt="logo" class="h-16 rounded-full" />
+              </div>
+              <div class="flex items-center text-gray-700 text-base font-medium">
+                  <ul class="flex items-center pr-3 xl:pr-12">
+                      <li class="cursor-pointer hover:text-gray-800 ease-in">
+                          <a href="#hero-section" class="focus:outline-none focus:ring-2 focus:ring-white">Home</a>
+                      </li>
+                      <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-800 ease-in">
+                          <a href="#about-us-section" class="focus:outline-none focus:ring-2 focus:ring-white">About Us</a>
+                      </li>
+                      <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-800 ease-in">
+                          <a href="#galery-section" class="focus:outline-none focus:ring-2 focus:ring-white">Galery</a>
+                      </li>
+                  </ul>
+                  <button class="px-6 py-3 bg-custom-blue hover:bg-sky-500 text-white text-base font-medium rounded-lg flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700">
+                      Download
+                      <img class="ml-4" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/large_typography_with_gradient_and_glass_effect_Svg5.svg" alt="arrow" />
+                  </button>
+              </div>
+          </div>
+      </nav>
+
+      <!-- Hero Description -->
+      <div class="relative px-4 xl:px-0 container mx-auto md:flex items-center gap-8">
+          <div class="text-color w-full md:w-1/3 pt-16 lg:pt-32 xl:pt-12">
+              <h1 class="text-4xl md:text-4xl lg:text-5xl w-11/12 lg:w-11/12 xl:w-full xl:text-6xl text-gray-900 font-extrabold f-f-l">Child-centric innovation.</h1>
+              <div class="f-f-r text-base lg:text-base pb-20 sm:pb-0 pt-10 xl:pt-6">
+                  <h2>Child-centric innovation prioritizes the needs and well-being of children in the innovation process. It involves developing tailored digital solutions that address their specific challenges and enhance their overall development.</h2>
+              </div>
+              <div class="lg:flex">       
+              <button class="hidden md:block hover:opacity-90 text-base w-full xl:text-base xl:w-6/12 mt-4 xl:mt-8 f-f-r py-4  bg-custom-blue text-white font-bold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 rounded-lg">Download App</button>
+              <button class="hidden md:block hover:opacity-90 text-base w-full xl:text-base xl:w-4/12 lg:ml-2 xl:ml-2 mt-4 xl:mt-8 f-f-r py-4  bg-sky-100 text-custom-blue font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 rounded-lg">Explore</button>
+              </div>
+          </div>
+          <img class="w-full mt-8 md:mt-0 object-fill md:w-2/3 md:-ml-4 lg:-ml-4 xl:ml-0 rounded-lg" src="/src/img/hero.png" alt="sample page" role="img" />
+           <button class="md:hidden hover:opacity-90 text-base w-full xl:text-base xl:w-6/12 mt-4 xl:mt-8 f-f-r py-4  bg-custom-blue text-white font-bold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 rounded-lg">Download App</button>
+           <button class="md:hidden hover:opacity-90 text-base w-full xl:text-base xl:w-4/12 xl:ml-2 mt-4 xl:mt-8 f-f-r py-4  bg-sky-100 text-custom-blue font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 rounded-lg">Explore</button>
+      </div>
+    </div>
+  </div>
+  </section>
+ 
+  <section id="about-us-section">
+    <div class="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 lg:mt-10">
+      <div class="flex lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12">
+          <div class="w-full lg:w-6/12">
+              <h2 class="w-full font-bold lg:text-4xl text-3xl dark:text-white">We are here to empower Children through Innovative Digital Solutions</h2>
+              <p class="font-normal text-base leading-6 text-gray-600 dark:text-gray-200 mt-6">We are here to empower children through innovative digital solutions. We believe that technology can be a powerful tool to provide children with strength, nurture their creativity, and help them reach their full potential. With an innovative approach to app development and digital solutions, we are committed to creating experiences that support and have a positive impact on children.</p>
+          </div>
+          <div class="w-full lg:w-6/12">
+              <img class="lg:block hidden w-full rounded-lg" src="/src/img/persentase.jpg" alt="people discussing on board" />
+              <img class="lg:hidden sm:block hidden w-full" src="https://i.ibb.co/16fPqrg/Rectangle-122-2.png" alt="people discussing on board" />
+              <img class="sm:hidden block w-full" src="https://i.ibb.co/Jxhpxh6/Rectangle-122.png" alt="people discussing on board" />
+          </div>
+      </div>
+
+      <div class="relative mt-24">
+          <div class="grid sm:grid-cols-3 grid-cols-2 sm:gap-8 gap-4">
+              <div class="z-20 w-12 h-12 bg-gray-800 rounded-full flex justify-center items-center">
+                  <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/about-us-3-svg1.svg" alt="flag" />
+              </div>
+
+            <img class="z-20" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/about-us-3-svg2.svg" alt="note" />
+
+             <img class="z-20 sm:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/about-us-3-svg3.svg" alt="users" />
+          </div>
+          <hr class="z-10 absolute top-2/4 w-full bg-gray-200" />
+      </div>
+      <div class="grid sm:grid-cols-3 grid-cols-2 sm:gap-8 gap-4">
+          <div>
+              <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white mt-6">Founded</p>
+              <p class="font-normal text-base leading-6 text-gray-600 dark:text-gray-200 mt-6">Negatice was founded as a personal project in November 2022, coinciding with my birthday. It was driven by a simple desire to create something that could bring even the smallest benefit to others.</p>
+          </div>
+          <div>
+              <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white mt-6">Currently 2 Apps </p>
+              <p class="font-normal text-base leading-6 text-gray-600 dark:text-gray-200 mt-6">We are currently testing two mobile applications as part of our development process. These applications are undergoing extensive testing to ensure their performance, user-friendliness, and effectiveness.</p>
+          </div>
+          <div class="sm:block hidden">
+              <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white mt-6">Yogyakarta User</p>
+              <p class="font-normal text-base leading-6 text-gray-600 dark:text-gray-200 mt-6">We are specifically targeting users in Jogja for our application testing phase. By focusing on this specific user group, we aim to gather valuable feedback and insights from individuals who reside in Jogja and are familiar with the local context. </p>
+          </div>
+      </div>
+      <div class="sm:hidden block relative mt-8">
+          <div class="grid sm:grid-cols-3 grid-cols-2 sm:gap-8 gap-4">
+             <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/about-us-3-svg3.svg" alt="user" />
+          </div>
+          <hr class="z-10 absolute top-2/4 w-full bg-gray-200" />
+      </div>
+      <div class="sm:hidden grid sm:grid-cols-3 grid-cols-2 sm:gap-8 gap-4">
+          <div>
+              <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white mt-6">400k User</p>
+              <p class="font-normal text-base leading-6 text-gray-600 dark:text-gray-200 mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+          </div>
+      </div>
+
+      <div class="flex lg:flex-row flex-col md:gap-14 gap-16 justify-between lg:mt-20 mt-16">
+          <div class="w-full lg:w-6/12">
+              <h2 class="font-bold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800 dark:text-white">Our Mission</h2>
+              <p class="font-normal text-base leading-6 text-gray-600 dark:text-gray-200 mt-6 w-full lg:w-10/12 xl:w-9/12">At Negatice, our mission is to empower children through innovative digital solutions. We believe that every child deserves access to tools and resources that enhance their growth, learning, and well-being in today's digital age.
+
+                Through our cutting-edge applications and technologies, we aim to create a positive impact on the lives of children. Our team of experts combines their knowledge in child development, education, and technology to design engaging and interactive digital experiences.</p>
+              <p class="font-normal text-base leading-6 text-gray-600 dark:text-gray-200 w-full lg:w-10/12 xl:w-9/12 mt-10">We strive to foster children's cognitive, emotional, and social development while promoting responsible and healthy technology use. Our solutions provide opportunities for creativity, exploration, and self-expression, creating a safe and inclusive digital environment for children to learn, connect, and thrive.
+
+                Join us on our journey as we empower children, shaping a brighter future for generations to come.</p>
+          </div>
+          <div class="w-full lg:w-6/12">
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 lg:gap-12 gap-10">
+                  <!-- Team Card -->
+                  <div class="flex p-4 shadow-md">
+                      <div class="mr-6">
+                         <img class="mr-6"  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/about-us-3-svg4.svg" alt="team card" />
+                      </div>
+                      <div class="">
+                          <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white">Team</p>
+                          <p class="mt-2 font-normal text-base leading-6 text-gray-600 dark:text-gray-200">Currently, I am working on this project as a personal endeavor, without a dedicated team.</p>
+                      </div>
+                  </div>
+
+                  <!-- Board Card -->
+                  <div class="flex p-4 shadow-md">
+                      <div class="mr-6">
+                         <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/about-us-3-svg5.svg" alt="board card" />
+                      </div>
+                      <div class="">
+                          <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white">Board</p>
+                          <p class="mt-2 font-normal text-base leading-6 text-gray-600 dark:text-gray-200">As a personal project, Negatice doesn't have a formal board structure. However, I act as the main decision-maker and oversee all aspects of the project's development and execution. </p>
+                      </div>
+                  </div>
+
+                  <!-- Press Card -->
+                  <div class="flex p-4 shadow-md">
+                      <div class="mr-6">
+                         <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/about-us-3-svg6.svg" alt="press card" />
+                      </div>
+                      <div class="">
+                          <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white">Press</p>
+                          <p class="mt-2 font-normal text-base leading-6 text-gray-600 dark:text-gray-200">I will establish media relationships and engage in activities such as press releases, interviews, and utilizing social media to enhance the visibility of the Negatice project.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </section>
+
+  <section id="galery-section">
+    <div class="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 lg:mt-10">
+      <div class="mx-auto xl:w-1/2 w-11/12">
+        <h1 role="heading" tabindex="0" class="text-6xl font-bold 2xl:leading-normal leading-normal text-center text-gray-800 dark:text-white">Touching hundreds of children's lives.</h1>
+        <h2 role="contentinfo" tabindex="0" class="text-base leading-normal text-center text-gray-600 dark:text-gray-200 mt-5">Enriching the lives of countless children, the Negatice project embraces a profound mission of making a positive and lasting impact. With a heartfelt dedication, we aim to touch the lives of hundreds of children, empowering them to thrive, discover their potential, and embrace a brighter future. </h2>
+      </div>
+      <div class="mx-auto px-4 flex flex-wrap items-center justify-center mt-4">
+          <div class="mt-24">
+              <div class="flex items-end">
+                  <img tabindex="0" src="https://i.ytimg.com/vi/n4dQCZcQ4hk/maxresdefault.jpg" alt="girl with blue background" class="w-20 h-20 rounded-lg mr-6" />
+                  <img tabindex="0" src="https://www.unicef.org/indonesia/sites/unicef.org.indonesia/files/styles/press_release_feature/public/UN058818.jpg?itok=RebMrI3h" alt="guy winking" class="w-48 h-36 rounded-lg" />
+              </div>
+              <div class="flex items-center justify-end">
+                  <img tabindex="0" src="https://assets-a1.kompasiana.com/statics/crawl/557fa7c524a9d581388b4567.jpeg" class="w-56 rounded-lg my-6" alt="guy smiling" />
+              </div>
+              <div class="flex items-start">
+                  <img tabindex="0" src="/src/img/ilustrasi-anak-belajar.jpg" alt="girl with bluw background" class="w-48 h-48 rounded-lg" />
+                  <img tabindex="0" src="https://asset.kompas.com/crop/0x0:1000x667/750x500/data/photo/2018/09/14/2858079969.jpg" alt="guy with glasses" class="w-20 h-20 rounded-lg ml-6 flex-shrink-0 object-cover object-fit" />
+              </div>
+          </div>
+          <div class="mt-14 ml-6">
+              <div class="lg:flex">
+                  <div>
+                      <img tabindex="0" src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2021/01/19/3476240132.jpg" alt="group of friends" class="w-96 h-72 rounded-lg object-center object-fit" />
+                  </div>
+                  <div>
+                      <div class="flex ml-6">
+                          <img tabindex="0" src="https://cdn.kibrispdr.org/data/155/foto-anak-desa-7.jpg" class="w-20 h-20 rounded-lg mt-14" alt="man" />
+                          <img tabindex="0" src="https://cdn.kibrispdr.org/data/155/foto-anak-desa-12.jpg" class="w-20 h-24 rounded-lg ml-6" alt="woman" />
+                      </div>
+                      <img tabindex="0" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdbdJOgZrDkp5bATOORWpa7nDDbhlhs8KgEH8bLdH-jbbGMrw1n6Kn59m-64u7A973dfw&usqp=CAU" alt="boy with blonde hair" class="ml-6 mt-6 w-48 h-32 rounded-lg" />
+                  </div>
+              </div>
+              <div class="mt-6 flex">
+                  <img tabindex="0" class="w-48 h-48 rounded-lg" src="https://assets-a1.kompasiana.com/statics/crawl/552d43c30423bde30e8b4567.jpeg" alt="young girl with red hair" />
+                  <img tabindex="0" class="w-72 h-56 rounded-lg ml-6" src="https://www.bernas.id/wp-content/uploads/2022/04/01516360663kaswarihaji-blogspot-com.jpg" alt="young girl with red hair" />
+              </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta-section">
+    <div class="2xl:mx-auto dark:bg-gray-900 2xl:container md:px-20 px-4 md:py-12 py-9">
+      <div class="relative rounded-md">
+          <img src="https://kartikapradana.sch.id/wp-content/uploads/2016/07/hari11.jpg" alt="city view" class="w-full h-full rounded-md  object-center object-fill absolute sm:block hidden" />
+          <img src="https://static.cdntap.com/tap-assets-prod/wp-content/uploads/sites/24/2019/02/anak-bahagia-lead.jpg" alt="city view" class="w-full h-full rounded-md absolute object-center object-fill sm:hidden" />
+          <div class="text-xl relative z-20 bg-gradient-to-r from-blue-700 to-transparent w-full h-full top-0 md:p-16 p-6 flex flex-col justify-between rounded-md ">
+              <div>
+                  <h1 class="md:text-5xl text-3xl font-bold md:leading-10 leading-9 text-white sm:w-auto w-64">Let's empower every child to build a brighter future!</h1>
+                  <p class="text-lg leading-6 text-white xl:w-5/12 lg:w-8/12 md:w-10/12  2xl:pr-12 mt-4">Every child deserves and is entitled to a bright and promising future. At Negatice, we firmly believe in the inherent value of every young individual and their right to a good life.</p>
+              </div>
+              <div class="md:mt-12 mt-20">
+                  <button class="text-base font-medium leading-4 text-custom-blue bg-white sm:w-auto w-full rounded p-4 focus:outline-none hover:bg-gray-100 focus:ring-2 focus:ring-offset-2 focus:ring-white">Explore More</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  </section>
+  
+  <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+  <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+          <a href="#" class="flex items-center mb-4 sm:mb-0">
+              <img src="/src/img/negatice-logo.png" class="h-8 mr-3 rounded-full" alt="Negatice Logo" />
+              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Negatice</span>
+          </a>
+          <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+              <li>
+                  <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+              </li>
+              <li>
+                  <a href="#" class="mr-4 hover:underline md:mr-6">Technology</a>
+              </li>
+              <li>
+                  <a href="#" class="mr-4 hover:underline md:mr-6 ">Information</a>
+              </li>
+              <li>
+                  <a href="#" class="hover:underline">Contact</a>
+              </li>
+          </ul>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#" class="hover:underline">Negatice™</a>. All Rights Reserved.</span>
+  </div>
+  </footer>
+
+
+</body>
+</html>
